@@ -40,7 +40,7 @@ pip install -r requirements.txt
 
 **Step 2: Create a .env file and included the following environment variables to this file**
 ```
-WEBSITE_URL=https://example.domain.com \
+WEBSITE_URL=https://example.domain.com/wp-json/mp/v1 \
 MEPR_API_KEY=yourMemberPressAPIKey \
 TRANS_PREFIX=mepr_trans
 ```
@@ -61,7 +61,7 @@ TRANS_PREFIX=mepr_trans
 ***Notes: Example can be found on app.py***
 
 ##### _version 1.1.0_
-- Updated at: Dec 19, 2020 11.52AM GMT+8
+- Updated at: Dec 19, 2020 11.52PM GMT+8
 - Add in Dynamic Functions
     - get_item
     - get_items
