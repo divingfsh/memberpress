@@ -6,31 +6,44 @@
 5. This python script is written to automate the creation of new member and transaction.
 6. Although there are numbers of REST API comes with MemberPress, I commonly use get_member, create_member and create_transaction only.
 
-
 ## LOGICS
+***Notes: Check out app.py for reference***
+
+**1. Basic**
 ```
-if the member exists in database:
-    create_transaction
+if get_member(email):
+    create_transaction(userid,membership)
 else:
-    create_member
-    create_transaction
+    create_member(email)
+    create_transaction(userid,membership)
 ```
-Notes: Check out app.py for reference.
+
+**2. Dynamic**
+```
+if get_items(member):
+    create_item(transactions,data)
+else:
+    create_item(member,data)
+    create_item(transactions,data)
+```
 
 ## INSTRUCTIONS
 **Step 1(a)**
-> Setup a virtual environment
+```
+Setup a virtual environment
+```
 
 **Step 1(b): pip install required packages**
 ```
-pip install - r requirements.txt
+pip install -r requirements.txt
 ```
 
 **Step 2: Create a .env file and included the following environment variables to this file**
-
+```
 WEBSITE_URL=https://example.domain.com \
 MEPR_API_KEY=yourMemberPressAPIKey \
 TRANS_PREFIX=mepr_trans
+```
 
 ##### Notes:
 *MEPR_API_KEY*
@@ -43,3 +56,22 @@ TRANS_PREFIX=mepr_trans
 - Can be very useful to track the transactions based on the event
 - Example, you can set it to bfcm2020
 - Later, you can easily filter the transactions for marketing analysis
+
+## CHANGELOG
+***Notes: Example can be found on app.py***
+
+##### _version 1.1.0_
+- Published at: Dec 18, 2020 3.16AM GMT+8
+- Add in Dynamic Functions
+    - get_item
+    - get_items
+    - create_item
+    - del_item
+    - Supported routes: transctions and members
+
+##### _version 1.0.0_
+- Published at: Dec 18, 2020 3.16AM GMT+8
+- Static Functions
+    - get_member
+    - create_member
+    - create_transactions
