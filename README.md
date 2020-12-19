@@ -40,8 +40,8 @@ pip install -r requirements.txt
 
 **Step 2: Create a .env file and included the following environment variables to this file**
 ```
-WEBSITE_URL=https://example.domain.com/wp-json/mp/v1 \
-MEPR_API_KEY=yourMemberPressAPIKey \
+WEBSITE_URL=https://example.domain.com/wp-json/mp/v1
+MEPR_API_KEY=yourMemberPressAPIKey
 TRANS_PREFIX=mepr_trans
 ```
 
