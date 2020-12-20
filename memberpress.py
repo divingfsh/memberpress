@@ -56,7 +56,7 @@ class MemberPress:
 
     def create_transaction(self, userid, membership, duration=0, send_receipt=False):
         if isinstance(membership, numbers.Number):
-            timing = datetime_generator()
+            timing = datetime_generator(duration)
             prefix = os.getenv('TRANS_PREFIX') if os.getenv('TRANS_PREFIX') else "trans"
             b = chars_generator()
             trans_num = f'{prefix}-{timing["created_at_tz"]}-{b}'
@@ -77,9 +77,9 @@ class MemberPress:
         else:
             raise Exception("Please provide a valid membership")
 
-    ##############
-    ## ADVANCED ##
-    ##############
+    #############
+    ## DYNAMIC ##
+    #############
 
     def get_items(self, route, params):
         if isinstance(params, dict) and route in self.routes:

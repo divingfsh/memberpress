@@ -43,6 +43,8 @@ pip install -r requirements.txt
 WEBSITE_URL=https://example.domain.com/wp-json/mp/v1
 MEPR_API_KEY=yourMemberPressAPIKey
 TRANS_PREFIX=mepr_trans
+HUBSPOT_KEY=yourHubSpotAPIKey
+HUBSPOT_ENDPOINT=https://api.hubapi.com/contacts/v1/contact
 ```
 
 ##### Notes:
@@ -58,7 +60,15 @@ TRANS_PREFIX=mepr_trans
 - Later, you can easily filter the transactions for marketing analysis
 
 ## CHANGELOG
-***Notes: Example can be found on app.py***
+***Notes: Example can be found on app.py (MemberPress) and app_hubspot.py (HubSpot)***
+##### _version 1.2.0_
+- Updated at: Dec 21, 2020 01.45AM GMT+8
+- Add in HubSpot Contact APIs
+    - get_contact_by_email
+    - create_contact
+    - update_property
+    - del_contact
+- These functions allow users to get and post data from/to HubSpot
 
 ##### _version 1.1.0_
 - Updated at: Dec 19, 2020 11.52PM GMT+8

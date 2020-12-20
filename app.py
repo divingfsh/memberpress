@@ -2,7 +2,7 @@ from datetime import date, datetime
 import os
 from utils import chars_generator, datetime_generator
 from dotenv import load_dotenv
-from cls import MemberPress
+from memberpress import MemberPress
 from data_templates import template_create_trans, template_create_member
 
 load_dotenv()
